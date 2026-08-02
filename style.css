@@ -1,0 +1,581 @@
+/* ===========================
+   GOOGLE FONT & RESET
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #111;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* ===========================
+        NAVBAR
+=========================== */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar {
+
+    width: 90%;
+    max-width: 1300px;
+
+    margin: auto;
+
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+
+    font-size: 30px;
+    font-weight: 700;
+
+}
+
+.nav-links {
+
+    display: flex;
+    list-style: none;
+    gap: 35px;
+
+}
+
+.nav-links a {
+
+    font-weight: 500;
+    transition: .3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#666;
+
+}
+
+.menu-btn{
+
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+
+}
+
+/* ===========================
+         HERO
+=========================== */
+
+.hero{
+
+    width:90%;
+    max-width:1300px;
+
+    margin:auto;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.hero-left{
+
+    flex:1;
+
+}
+
+.hero-left h4{
+
+    color:#666;
+    font-size:22px;
+
+}
+
+.hero-left h1{
+
+    font-size:70px;
+    margin:10px 0;
+
+}
+
+.hero-left h2{
+
+    font-size:38px;
+    margin-bottom:20px;
+    color:#333;
+
+}
+
+.hero-left p{
+
+    max-width:600px;
+    color:#555;
+
+}
+
+.hero-buttons{
+
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+
+}
+
+.btn{
+
+    padding:16px 36px;
+    border-radius:40px;
+    transition:.3s;
+    font-weight:600;
+
+}
+
+.black-btn{
+
+    background:#111;
+    color:white;
+
+}
+
+.black-btn:hover{
+
+    background:#333;
+
+}
+
+.white-btn{
+
+    border:2px solid black;
+
+}
+
+.white-btn:hover{
+
+    background:black;
+    color:white;
+
+}
+.hero-right img{
+
+    width:380px;
+    height:480px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    
+
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    transition:.4s ease;
+
+}
+
+.hero-right img:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+    box-shadow:0 35px 70px rgba(0,0,0,.25);
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-20px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+         SECTIONS
+=========================== */
+
+section{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:100px 0;
+
+}
+
+.section-title{
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    font-size:42px;
+    position:relative;
+
+}
+
+.section-title h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:70px;
+    height:4px;
+
+    background:black;
+
+    left:0;
+    bottom:-10px;
+
+}
+
+/* ===========================
+         ABOUT
+=========================== */
+
+.about-content{
+
+    font-size:18px;
+    color:#444;
+
+}
+
+/* ===========================
+         SKILLS
+=========================== */
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+
+    gap:25px;
+
+}
+
+.skill-card{
+
+    padding:22px;
+
+    text-align:center;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.skill-card:hover{
+
+    background:black;
+    color:white;
+
+    transform:translateY(-10px);
+
+}
+
+/* ===========================
+       EXPERIENCE
+=========================== */
+
+.timeline{
+
+    border-left:3px solid black;
+
+    padding-left:40px;
+
+}
+
+.timeline-item{
+
+    margin-bottom:50px;
+
+    position:relative;
+
+}
+
+.timeline-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:16px;
+    height:16px;
+
+    border-radius:50%;
+
+    background:black;
+
+    left:-49px;
+    top:6px;
+
+}
+
+.timeline-item h3{
+
+    font-size:28px;
+
+}
+
+.timeline-item span{
+
+    color:#666;
+
+}
+
+/* ===========================
+        PROJECTS
+=========================== */
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.project-card{
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid #eee;
+
+    transition:.4s;
+
+    background:white;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-15px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.project-card img{
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+.project-content{
+
+    padding:25px;
+
+}
+
+.project-content h3{
+
+    margin-bottom:10px;
+
+}
+
+.project-content p{
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+.project-content a{
+
+    font-weight:600;
+
+}
+
+.project-content a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================
+        CONTACT
+=========================== */
+
+.contact-box{
+
+    display:grid;
+
+    gap:20px;
+
+    font-size:20px;
+
+}
+
+.contact-box i{
+
+    margin-right:15px;
+
+}
+
+/* ===========================
+        FOOTER
+=========================== */
+
+footer{
+
+    border-top:1px solid #eee;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#666;
+
+}
+
+/* ===========================
+       RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.hero{
+
+    flex-direction:column-reverse;
+    text-align:center;
+    padding-top:120px;
+
+}
+
+.hero-left p{
+
+    margin:auto;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-left h1{
+
+    font-size:50px;
+
+}
+
+.hero-left h2{
+
+    font-size:30px;
+
+}
+
+.hero-right img{
+
+    width:280px;
+    height:280px;
+
+}
+
+.nav-links{
+
+    position:absolute;
+
+    top:80px;
+    right:-100%;
+
+    width:220px;
+
+    background:white;
+
+    flex-direction:column;
+
+    padding:30px;
+
+    transition:.4s;
+
+    border-left:1px solid #ddd;
+
+    height:calc(100vh - 80px);
+
+}
+
+.nav-links.active{
+
+    right:0;
+
+}
+
+.menu-btn{
+
+    display:block;
+
+}
+
+}
